@@ -12,4 +12,4 @@ docker-compose up -d
 
 [Your WP app](http://127.0.0.1)
 
-[phpMyAdmin](http://127.0.0.1)
+[phpMyAdmin](http://127.0.0.1:8181)
