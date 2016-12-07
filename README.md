@@ -10,6 +10,6 @@ docker-compose up -d
 
 :bulb:
 
-[Your WP app](http://127.0.0.1)
+[Your WP app](http://127.0.0.1:81)
 
 [phpMyAdmin](http://127.0.0.1:8181)
