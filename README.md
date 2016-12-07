@@ -14,6 +14,12 @@ docker-compose up -d
 
 [phpMyAdmin](http://127.0.0.1:8181)
 
+Connect to mariadb server in command (using empty password)
+
+```
+mysql -u root -h 127.0.0.1 -P 3307 -p
+```
+
 ###Default WP environment variables
 
 * WORDPRESS_USERNAME: WordPress application username. Default: user
