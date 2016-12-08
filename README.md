@@ -2,19 +2,25 @@
 
 > A docker compose for WordPress apps taken from [bitnami](https://hub.docker.com/r/bitnami/wordpress/) plus [phpMyAdmin official docker image](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
 
+###Installation
+
+[Dowload docker for Mac](https://docs.docker.com/docker-for-mac)
+
 ```
 curl -LO https://raw.githubusercontent.com/chisNaN/docker-wp/master/docker-compose.yml
 
 docker-compose up -d
 ```
 
-:bulb:
+###Access to your apps
 
 [Your WP app](http://127.0.0.1:81)
 
 [phpMyAdmin](http://127.0.0.1:8181)
 
-Connect to mariadb server in command (using empty password)
+:bulb: ports 81, 8181 and 3307 (on your host) were chosen in order not to interfer with already installed apache and mysql services
+
+###Connect to mariadb server in command (using empty password)
 
 ```
 mysql -u root -h 127.0.0.1 -P 3307 -p
