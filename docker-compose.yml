@@ -1,5 +1,12 @@
 version: '2'
 services:
+  nginx-proxy:
+      image: jwilder/nginx-proxy
+      container_name: nginx-proxy
+      ports:
+        - '80:80'
+      volumes:
+        - '/var/run/docker.sock:/tmp/docker.sock:ro'
   mariadb:
     image: 'bitnami/mariadb:latest'
     ports:
@@ -8,9 +15,11 @@ services:
       - 'mariadb_data:/bitnami/mariadb'
   application:
     image: 'bitnami/wordpress:latest'
-    ports:
-      - '81:80'
-      - '444:443'
+    environment:
+      VIRTUAL_HOST: wp.lo
+    #ports:
+     # - '81:80'
+      #- '444:443'
     volumes:
       - 'wordpress_data:/bitnami/wordpress'
       - 'apache_data:/bitnami/apache'
@@ -21,9 +30,10 @@ services:
     image: phpmyadmin/phpmyadmin
     depends_on:
       - mariadb
-    ports:
-      - 8181:80
+    #ports:
+     # - 8181:80
     environment:
+      VIRTUAL_HOST: pma.lo
       PMA_HOST: mariadb
       PMA_USER: root
       PMA_PASSWORD: ''
