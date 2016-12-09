@@ -14,11 +14,17 @@ docker-compose up -d
 
 ###Access to your apps
 
-[Your WP app](http://127.0.0.1:81)
+```
+sudo nano /etc/hosts
 
-[phpMyAdmin](http://127.0.0.1:8181)
+127.0.0.1   wp.lo
+127.0.0.1   pma.lo
+```
 
-:bulb: ports 81, 8181 and 3307 (on your host) were chosen in order not to interfer with already installed apache and mysql services
+[Your WP app](http://wp.lo/)
+
+[phpMyAdmin](http://pma.lo)
+
 
 ###Connect to mariadb server in command (using empty password)
 
@@ -28,14 +34,14 @@ mysql -u root -h 127.0.0.1 -P 3307 -p
 
 ###Default WP environment variables
 
-* WORDPRESS_USERNAME: WordPress application username. Default: user
+* WORDPRESS_USERNAME: Default: user
 
-* WORDPRESS_PASSWORD: WordPress application password. Default: bitnami
+* WORDPRESS_PASSWORD: Default: bitnami
 
-* WORDPRESS_EMAIL: WordPress application email. Default: user@example.com
+* WORDPRESS_EMAIL: Default: user@example.com
 
-* WORDPRESS_FIRST_NAME: WordPress user first name. Default: FirstName
+* WORDPRESS_FIRST_NAME: Default: FirstName
 
-* WORDPRESS_LAST_NAME: WordPress user last name. Default: LastName
+* WORDPRESS_LAST_NAME: Default: LastName
 
-* WORDPRESS_BLOG_NAME: WordPress blog name. Default: User's blog
+* WORDPRESS_BLOG_NAME: Default: User's blog
