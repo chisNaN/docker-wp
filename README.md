@@ -1,8 +1,8 @@
-#Docker WordPress
+# Docker WordPress
 
 > A docker compose for WordPress apps taken from [bitnami](https://hub.docker.com/r/bitnami/wordpress/) plus [phpMyAdmin official docker image](https://hub.docker.com/r/phpmyadmin/phpmyadmin/)
 
-###Installation
+### Installation
 
 [Dowload docker for Mac](https://docs.docker.com/docker-for-mac)
 
@@ -12,7 +12,7 @@ curl -LO https://raw.githubusercontent.com/chisNaN/docker-wp/master/docker-compo
 docker-compose up -d
 ```
 
-###Access to your apps
+### Access to your apps
 
 ```
 sudo nano /etc/hosts
@@ -26,13 +26,13 @@ sudo nano /etc/hosts
 [phpMyAdmin](http://pma.lo)
 
 
-###Connect to mariadb server in command (using empty password)
+### Connect to mariadb server in command (using empty password)
 
 ```
 mysql -u root -h 127.0.0.1 -P 3307 -p
 ```
 
-###Default WP environment variables
+### Default WP environment variables
 
 * WORDPRESS_USERNAME: Default: user
 
