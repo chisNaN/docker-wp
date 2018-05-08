@@ -4,7 +4,7 @@
 
 ### Installation
 
-[Dowload docker for Mac](https://docs.docker.com/docker-for-mac)
+[Download docker for Mac](https://docs.docker.com/docker-for-mac)
 
 ```
 curl -LO https://raw.githubusercontent.com/chisNaN/docker-wp/master/docker-compose.yml
